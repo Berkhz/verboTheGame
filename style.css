@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+main {
+    background-color: #2a0948;
+    height: 100vh;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+}
