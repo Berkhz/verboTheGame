@@ -1,16 +1,26 @@
 async function carregarPalavras() {
     try {
         const response = await fetch('verbos.txt')
+
         if (!response.ok)
         throw new Error('Não foi possível carregar as palavras')
-
-        const texto = response.text()
-        const palavras = texto.split('\n').map(palavra => palavra.trim()).filter(palavra => palavra.length > 0)
-
-        console.log(palavras)
+    
+        const texto = await response.text()
+        return texto
     } catch (error) {
-        throw new Error('500. An error has occurred ' + error)
+        throw new Error('500. Não foi possível carregar as palavras ' + error)
     }
 }
 
-carregarPalavras()
+async function filtrarPalavras() {
+    try {
+        const palavras = await carregarPalavras()
+        const palavrasFiltradas = palavras.split('\n').filter(palavra => palavra.length === 6)
+        console.log(palavrasFiltradas)
+    } catch (error) {
+        throw new Error('500. Não foi possível filtrar as palavras ' + error)
+    }
+    
+}
+
+filtrarPalavras()
