@@ -13,5 +13,5 @@ Tecnologias que vão englobar o jogo:
 ## Objetivo
 Assim como os outros jogos, o VERBO será um jogo de adivinhação.
 - Diariamente, as palavras serão atualizadas.
-- Serão seis tentativas para acerto e uma dica poderá ser solicitada.
+- Serão seis tentativas para acerto.
 - Seu estilo de jogo padrão será de uma palavra, porém futuramente serão implementados novos estilos de jogos.
